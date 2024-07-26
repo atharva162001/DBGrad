@@ -1,0 +1,21 @@
+/* Custom CSS */
+body {
+    font-family: Arial, sans-serif;
+}
+
+header img {
+    width: 100%;
+    max-width: 150px;
+    height: auto;
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+    header img {
+        max-width: 100px;
+    }
+
+    .card {
+        margin-bottom: 1.5rem;
+    }
+}
