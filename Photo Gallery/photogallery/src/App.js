@@ -1,5 +1,5 @@
 import './App.css';
-import Gallery from './components/gallery';
+import Gallery from './gallery';
 function App() {
   return (
     <div className="App">
