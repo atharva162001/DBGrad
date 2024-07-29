@@ -38,7 +38,7 @@ const Gallery = () => {
 
     return (
         <div className="container">
-            <h1 className="my-4 text-center">Photo Gallery</h1>
+            <h1 className="my-4 text-center">Album</h1>
             <div className="input-group mb-3">
                 <input
                     type="text"
@@ -54,7 +54,7 @@ const Gallery = () => {
                     value={description}
                     onChange={(e) => setDescription(e.target.value)}
                 />
-                <button className="btn btn-primary m-1" onClick={addImage}>Add Image</button>
+                <button className="btn btn-primary m-1" onClick={addImage}>Add Photo</button>
             </div>
             <div className="row">
                 {images.map((image, index) => (
@@ -64,7 +64,7 @@ const Gallery = () => {
                             <div className="card-body">
                                 <p className="card-text">{image.description}</p>
                                 <Button variant="success" onClick={() => editImage(index)} className="me-2">Edit</Button>
-                                <Button variant="danger" onClick={() => removeImage(index)}>Delete</Button>
+                                <Button variant="danger" onClick={() => removeImage(index)}></Button>
                             </div>
                         </div>
                     </div>
@@ -73,12 +73,12 @@ const Gallery = () => {
 
             <Modal show={showModal} onHide={() => setShowModal(false)}>
                 <Modal.Header closeButton>
-                    <Modal.Title>Edit Image</Modal.Title>
+                    <Modal.Title>Edit Photo</Modal.Title>
                 </Modal.Header>
                 <Modal.Body>
                     <Form>
                         <Form.Group className="mb-3">
-                            <Form.Label>Image URL</Form.Label>
+                            <Form.Label>Photo URL</Form.Label>
                             <Form.Control
                                 type="text"
                                 value={currentImage?.url || ''}
