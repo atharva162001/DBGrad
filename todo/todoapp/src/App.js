@@ -2,15 +2,14 @@ import './styles/styles.css'
 import Form from './components/Form';
 import Header from './components/Header';
 import TODOHero from './components/todohero';
-import TODOList from './components/todolist';
+import TODOList from './components/TODOlist';
 import React from 'react';
 
 function App() {
   const [todos,setTodos] = React.useState([
-    {title:"Wake up 6 AM", id:1,is_completed:false},
-    {title:"Do Excercise", id:2,is_completed:true},
-    {title:"Start Learning React", id:3,is_completed:false}
-  ])
+    { id: 1, title: 'Todo 1', is_completed: false },
+    { id: 2, title: 'Todo 2', is_completed: true },
+])
 
   const todos_completed = todos.filter((todo)=> todo.is_completed===true).length
   const total_todos = todos.length
